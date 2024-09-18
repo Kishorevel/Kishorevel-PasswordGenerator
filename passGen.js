@@ -13,13 +13,14 @@ function genpass(passlen,uppercase,lowercase,numbers,symbols){
     allowedchars += symbols ? spclchars : "";
 
     for(let i=0;i<passlen;i++){
-        let randomInd = Math.floor(Math.random()*allowedchars.length);
+        let randomInd = Math.floor(Math.random()*allowedchars.length); // Using random function to generate random number
         password += allowedchars[randomInd];
     }
     
     return password;
 }
-
+//Choose the length and what kind of characters you want for your password.
+//If boolean values changed it will be exception.
 const passlen = 12;
 const uppercase = true;
 const lowercase = true;
